@@ -1,22 +1,34 @@
-# Python
-backend/venv/
-backend/__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Django secret files
-backend/.env
+# ======================
+# 🔙 Backend (Django)
+# ======================
+venv/
+__pycache__/
+*.py[cod]
 *.sqlite3
+*.log
+backend/.env
 
-# Node.js
+# ======================
+# 🔜 Frontend (Next.js)
+# ======================
 frontend/node_modules/
 frontend/.next/
 frontend/.env.local
+frontend/.turbo/
+frontend/.eslintcache
 
-# VSCode / OS metadata
+# ======================
+# 🛠️ Tooling / Editors
+# ======================
 .vscode/
+.idea/
 .DS_Store
+.env
+*.swp
 
-# Venv
+
+# ======================
+# Virtual evironment
+# ======================
 /venv
+/.venv
