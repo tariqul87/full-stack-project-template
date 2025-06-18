@@ -1,0 +1,22 @@
+# Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django secret files
+backend/.env
+*.sqlite3
+
+# Node.js
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+
+# VSCode / OS metadata
+.vscode/
+.DS_Store
+
+# Venv
+/venv
