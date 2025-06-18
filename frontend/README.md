@@ -2,35 +2,60 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Install and run backedn server
+===
+Step 1: Install and activate virtual environment
+```
+python3 -m venv venv
+source venv/bin/activete
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Step 2: Install pip requirements
+```
+pip install -r requirements.txt
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Step 3: Create `.env` file inside backend folder
+```
+cd backend
+touch .env
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Step 4: Add `.env` file the secret key
+```
+DEBUG=True
+SECRET_KEY=your-secret-key
+```
 
-## Learn More
+Step 5: Run the API server
+```
+python manage.py runserver 8000
+```
 
-To learn more about Next.js, take a look at the following resources:
+Your server should be running at port 8000!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install and run frontend server
+===
+Step 1: Go to frontend folder and install the requirements
+```
+cd frontend
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Step 2: Create `.env.local` inside the frontend folder
+```
+touch .env.local
+```
 
-## Deploy on Vercel
+Step 3: Add api server url in `.env.local`
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Step 4:
+Run your frontend server
+```
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Your frontend should be running at port 3000!

@@ -6,7 +6,7 @@ export default function Home() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8000/hello')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/hello`)
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
       .catch((err) => setMessage('Error fetching message: ' + err.message));
