@@ -7,7 +7,7 @@ Install and run backedn server
 Step 1: Install and activate virtual environment
 ```
 python3 -m venv venv
-source venv/bin/activete
+source venv/bin/activate
 ```
 
 Step 2: Install pip requirements
