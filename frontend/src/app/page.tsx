@@ -1,7 +1,7 @@
 "use client";
 
-import CatalogItems from "@/components/CatalogItems";
+import Table from "@/components/Table";
 
 export default function Home() {
-  return <CatalogItems />;
+  return <Table />;
 }
